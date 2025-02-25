@@ -73,14 +73,12 @@ public class Lab {
     public String toString() {
         String res = "Lab{Capacity - " + capacity + ", Location - " + location + ", Morning: ";
         if (morning.getEnrollment() > 0) {
-            res += "Session{Name - " + morning.getName() + ", Enrollment - " +
-                    morning.getEnrollment() + "}, Afternoon: " ;
+            res += morning.toString() + ", Afternoon: " ;
         } else {
             res += "Available, Afternoon: ";
         }
         if (afternoon.getEnrollment() > 0) {
-            res += "Session{Name - " + afternoon.getName() + ", Enrollment - " +
-                    afternoon.getEnrollment() + "}";
+            res += afternoon.toString();
         } else {
             res += "Available";
         }
